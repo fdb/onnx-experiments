@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Not Hot Dog | ONNX Experiments</title>
+        <link rel="stylesheet" href="/build/index.css" />
+    </head>
+
+    <body>
+        <div class="mx-auto mt-10 flex max-w-xl flex-col items-center">
+            <h1 class="mb-2 text-2xl tracking-tight">
+                Not Hot Dog | ONNX Experiments
+            </h1>
+            <p class="font-mono text-slate-400">
+                The classic machine learning "Hello World" example, trying to
+                distinguish between hot dogs and other types of food (aka "not
+                hot dogs").
+            </p>
+            <section
+                id="upload-zone"
+                class="mt-5 flex w-full cursor-pointer flex-col items-center justify-center gap-2 rounded-lg bg-slate-700 px-4 py-8 text-center text-slate-400"
+            >
+                <span>Drag and Drop Image</span>
+                <span>— OR —</span>
+                <span
+                    class="rounded bg-white px-4 py-4 text-slate-900 opacity-10"
+                    >Click to Upload</span
+                >
+            </section>
+            <section class="mt-5 flex flex-col items-center">
+                <p class="mb-2">Demo Images</p>
+                <div class="flex items-center gap-4">
+                    <img
+                        class="demo-image h-32 w-32 cursor-pointer rounded-lg object-cover hover:opacity-80"
+                        src="hot_dog_1.jpg"
+                    />
+                    <img
+                        class="demo-image h-32 w-32 cursor-pointer rounded-lg object-cover hover:opacity-80"
+                        src="not_hot_dog_1.jpg"
+                    />
+                    <img
+                        class="demo-image h-32 w-32 cursor-pointer rounded-lg object-cover hover:opacity-80"
+                        src="hot_dog_2.jpg"
+                    />
+                    <img
+                        class="demo-image h-32 w-32 cursor-pointer rounded-lg object-cover hover:opacity-80"
+                        src="not_hot_dog_2.jpg"
+                    />
+                </div>
+            </section>
+            <section class="mt-10" id="current-image-wrapper"></section>
+            <div id="log" class="mt-5 font-mono text-zinc-300"></div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jimp/0.22.10/jimp.min.js"></script>
+        <script src="./main.js"></script>
+    </body>
+</html>

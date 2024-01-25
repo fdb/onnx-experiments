@@ -1,0 +1,17 @@
+{
+  "name": "onnx-experiments",
+  "version": "1.0.0",
+  "description": "This repository contains experiments on working with the ONNX format, and specifically using onnxruntime-web to run ONNX models in the browser.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss build web/css/index.css -o web/build/index.css",
+    "dev": "tailwindcss -i web/css/index.css -o web/build/index.css -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
