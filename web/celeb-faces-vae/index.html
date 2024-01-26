@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Celeb Faces | ONNX Experiments</title>
+        <link rel="stylesheet" href="/build/index.css" />
+    </head>
+
+    <body>
+        <div class="mx-auto mt-10 flex max-w-xl flex-col items-center">
+            <h1 class="mb-2 text-2xl tracking-tight">
+                Celeb Faces | ONNX Experiments
+            </h1>
+            <p class="font-mono text-slate-400">
+                A Variational Autoencoder trained on the popular
+                <a
+                    href="https://www.kaggle.com/datasets/jessicali9530/celeba-dataset"
+                    >Celeb Faces dataset</a
+                >.
+            </p>
+            <section class="mt-5 flex flex-col items-center">
+                <p class="mb-2">Generation</p>
+                <canvas
+                    id="c"
+                    width="256"
+                    height="256"
+                    class="mb-5 h-auto w-full rounded shadow-lg"
+                ></canvas>
+                <button
+                    id="run-button"
+                    class="rounded bg-slate-700 p-4 text-slate-300"
+                >
+                    Run
+                </button>
+            </section>
+
+            <div id="log" class="mt-5 font-mono text-zinc-300"></div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+        <script src="./main.js"></script>
+    </body>
+</html>

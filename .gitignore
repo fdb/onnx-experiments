@@ -2,3 +2,4 @@
 node_modules/
 *.onnx
 .ipynb_checkpoints/
+web/models/
